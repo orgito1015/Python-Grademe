@@ -167,17 +167,6 @@ void exam::explanation(void)
               << "             - Name of exercise, fail or success, current assignement and level.\n"
               << std::endl << std::endl;
 
-    std::cout << "\x1B[32m      🚀 Grademe VIP\e[97m\e[1m: (0€ - 3€)" << std::endl;
-    std::cout << "         You can become VIP by contributing to the repo, making a \x1B[35mPull Request\e[97m\e[1m\n         OR \x1B[32mSponsor Github Page\e[97m\e[1m (use \x1B[35msponsor\e[97m\e[1m for more info):\n"
-              << "             - Instant correction with new \x1B[35mgradenow\e[97m\e[1m command\n"
-              << "             - Force an exercise to succeed with \x1B[35mforce_success\e[97m\e[1m command\n"
-              << "             - Having the \x1B[35mSAME display condition\e[97m\e[1m as 42 school\n"
-              << "               More coming...\n"
-              << std::endl << std::endl;
-    
-    std::cout << RED << "     ‼️  DISCLAIMER" << WHITE << std::endl;
-    std::cout << "         This program is " << RED << "not" << WHITE << " the real 42 exam and is " << RED << "not" << WHITE << " made by 42." << std::endl;
-    std::cout << "         It is created by a student, free and open-source." << std::endl << std::endl;
     std::cout << RESET << "     (Press enter to continue...)" << std::endl
               << "      ";
     if (!std::getline(std::cin, enter))
