@@ -47,7 +47,7 @@ void exam::restore_data(void)
         file >> backup.level_per_ex_save;
         file >> backup.using_cheatcode;
 
-        backup.current_ex = new exercise(backup.get_lvl(), name, std::stoi(assign), std::stoi(time_bef_grade));
+        backup.current_ex = new exercise(backup.get_lvl(), name, std::stoi(assign), static_cast<time_t>(std::stol(time_bef_grade)));
         backup.backup = 1;
         file.close();
     }
@@ -109,7 +109,7 @@ void exam::restore_data(void)
         }
         else
         {
-            std::cout << "   Exam token deteled" << std::endl;
+            std::cout << "   Exam token deleted" << std::endl;
             std::cin.ignore();
             // delete file and return to menu
             system("rm .system/exam_token/current_token.txt");

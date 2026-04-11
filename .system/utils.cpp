@@ -104,8 +104,6 @@ bool exam::clean_all()
         system("rm -rf subjects");
     if (file_exists(".system/grading"))
         system("rm -rf .system/grading");
-    if (file_exists(".system/grading/passed"))
-        system("rm -rf .system/grading/passed");
     if (file_exists(".dev"))
         system("rm -f .dev");
     return (true);

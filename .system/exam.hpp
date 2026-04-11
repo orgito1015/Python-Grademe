@@ -21,8 +21,6 @@
 #include <string.h>
 #include <sstream>
 #include <random>
-#include <readline/readline.h>
-#include <readline/history.h>
 
 #define BOLD "\e[1m"
 #define RESET "\e[0m"
@@ -39,16 +37,12 @@ std::string generate_unique_id();
 std::string current_path(void);
 std::string remaining_time(time_t end_time);
 std::string lastupdate(time_t end_time);
-std::string remaining_time(time_t end_time);
-std::string current_path(void);
-exercise *randomize_exercise(std::map<int, exercise> list, bool remove_success);
-exam restore_data(void);
+exercise randomize_exercise(std::map<int, exercise> list, bool remove_success);
 bool file_exists(std::string path);
 
 void reset_folder(void);
 void connexion(void);
 void sigc(int sig);
-void sigd(void);
 void sigd(void);
 
 int stud_or_swim(void);

@@ -183,7 +183,7 @@ bool exam::start_new_ex(void)
     if (!backup)
     {
         list_ex_lvl = list_dir();
-        exercise ex = *randomize_exercise(list_ex_lvl, setting_dse);
+        exercise ex = randomize_exercise(list_ex_lvl, setting_dse);
         current_ex = new exercise(ex);
         prepare_current_ex();
     }
