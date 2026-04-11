@@ -16,6 +16,8 @@ void exam::success_ex(bool force)
     // insert the success exercise into file .system/exam_token/success_ex
     if (!force)
     {
+        if (!file_exists("success"))
+            system("mkdir success");
         std::ofstream file;
         file.open("success/success_ex", std::ios::app);
         file << current_ex->get_name() << std::endl;
@@ -41,8 +43,6 @@ void exam::success_ex(bool force)
     {
         if (file_exists("rendu/"))
         {
-            if (!file_exists("success"))
-                system("mkdir success");
             system("cp -r rendu/* success/ 2> /dev/null");
         }
     }
@@ -106,7 +106,6 @@ void exam::end_exam()
     if (c == 'y' || c == 'Y')
     {
         int is_linux = 0;
-#define O 1
 #ifdef __linux__
         is_linux = 1;
 #endif

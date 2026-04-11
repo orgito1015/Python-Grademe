@@ -175,7 +175,7 @@ void exam::explanation(void)
               << "               More coming...\n"
               << std::endl << std::endl;
     
-    std::cout << RED << "     ‼️  DICLAIMER" << WHITE << std::endl;
+    std::cout << RED << "     ‼️  DISCLAIMER" << WHITE << std::endl;
     std::cout << "         This program is " << RED << "not" << WHITE << " the real 42 exam and is " << RED << "not" << WHITE << " made by 42." << std::endl;
     std::cout << "         It is created by a student, free and open-source." << std::endl << std::endl;
     std::cout << RESET << "     (Press enter to continue...)" << std::endl
@@ -284,7 +284,8 @@ exam::exam(void) : exam_grade(0), level(0), level_max(0), failures(0), student(f
     reelmode = true;
     waiting_time = true;
 	vip = 0;
-    username = getenv("USER");
+    const char *user_env = getenv("USER");
+    username = (user_env != NULL) ? user_env : "user";
     load_settings();
     vip = 1; // Bypass vip
     changex = 0;

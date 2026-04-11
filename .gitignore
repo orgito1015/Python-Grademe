@@ -1,0 +1,29 @@
+# Compiled exam binary
+.system/a.out
+.system/a.out.dSYM/
+
+# Exam state files
+.system/readline_ok
+.system/.devmake.err
+.system/unique_id.txt
+.system/vip_list
+
+# Student work directories (created at runtime)
+rendu/
+subjects/
+success/
+.system/grading/
+
+# Exam token (runtime state)
+.system/exam_token/current_token.txt
+
+# Traceback files (generated during grading)
+traceback
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
