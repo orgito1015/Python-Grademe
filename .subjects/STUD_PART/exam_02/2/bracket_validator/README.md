@@ -1,0 +1,40 @@
+Assignment name  : bracket_validator
+Expected files   : bracket_validator.py
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that checks if brackets [], parentheses (), and braces {} are properly
+balanced and correctly nested in a string. All others characters are ignored. Return True if balanced, False otherwise
+
+Your function must be declared as follows:
+
+def bracket_validator(s: str) -> bool:
+
+Examples:
+
+Input: bracket_validator("()")
+Output: True
+
+Input: bracket_validator("()[]{}")
+Output: True
+
+Input: bracket_validator("(]")
+Output: False
+
+Input: bracket_validator("([)]")
+Output: False
+
+Input: bracket_validator("{[]}")
+Output: True
+
+Input: bracket_validator("hello(world)[test]{code}")
+Output: True
+
+Input: bracket_validator("((()))")
+Output: True
+
+Input: bracket_validator("((())")
+Output: False
+
+Input: bracket_validator("")
+Output: True
