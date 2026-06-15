@@ -1,5 +1,6 @@
 import sys
 import os
+import ast
 import importlib.util
 
 # Load student/solution file from same directory as this main.py
@@ -10,7 +11,6 @@ _mod = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_mod)
 cryptic_sorter = _mod.cryptic_sorter
 
-import ast
 
 
 def main() -> None:
