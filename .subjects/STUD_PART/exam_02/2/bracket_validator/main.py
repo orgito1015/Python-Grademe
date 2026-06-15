@@ -17,13 +17,10 @@ def main() -> None:
     """
     if len(sys.argv) != 2:
         return
-
-    try:
-        s = sys.argv[1]
-        result = bracket_validator(s)
-        print(result)
-    except Exception:
-        return
+        
+s = sys.argv[1]
+result = bracket_validator(s)
+print(result)
 
 
 if __name__ == "__main__":
