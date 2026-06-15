@@ -18,14 +18,10 @@ def main() -> None:
     if len(sys.argv) != 3:
         return
 
-    try:
-        s1 = sys.argv[1]
-        s2 = sys.argv[2]
-        result = string_permutation_checker(s1, s2)
-        print(result)
-    except Exception:
-        return
-
+s1 = sys.argv[1]
+s2 = sys.argv[2]
+result = string_permutation_checker(s1, s2)
+print(result)
 
 if __name__ == "__main__":
     main()
